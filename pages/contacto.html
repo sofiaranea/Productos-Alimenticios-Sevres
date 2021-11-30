@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos alimenticios Sevres</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Inicio header -->
+    <header>        
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/logo.png" alt="logo" width="200px">
+            </a>   
+        </div>
+        <div class="burger-menu">
+            <label class="chequeable">
+                <input type="checkbox" name="menu">
+                <img src="../img/menu.svg" alt="menu">
+                <div class="submenu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
+                    <li><a href="expendedoras.html">Expendedoras</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="#" class="active">Contacto</a></li>
+                </div> 
+            </label>
+        </div>
+        <nav>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
+            <li><a href="expendedoras.html">Expendedoras</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#" class="active">Contacto</a></li>
+        </nav>
+    </header>
+    <!-- Fin header -->
+    <!-- Inicio main -->
+    <main class="contacto-grid">
+        <section class="contacto-map">
+            <div>
+                <h2>¡DEJANOS TU CONSULTA!</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.822214824579!2d-58.44532808417356!3d-34.65919256794372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbeb9da45789%3A0xc9296dec70f0cf51!2sAv.%20Lafuente%202770%2C%20C1437%20CABA!5e0!3m2!1ses!2sar!4v1635715821070!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <section class="form">
+            <h2>¡DEJANOS TU CONSULTA!</h2>
+            <div class="formulario">
+                <form action="" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="user_nombre" id="nombre" required>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="user_apellido" id="apellido" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="user_email" id="email" required>
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="user_consulta" id="consulta" cols="30" rows="10" required></textarea>
+                    <input type="submit" value="Enviar" id="enviar">
+                </form>
+            </div>   
+        </section>
+    </main>  
+    <!-- Fin main -->
+    <!-- Inicio footer -->
+    <footer>
+        <h3>Información al consumidor</h3>
+        <p>Dirección: Av. Lafuente 2770 CABA</p>
+        <p>Tel: 4919-1009 / 1022</p>
+        <p>Mail: asistencia@sevres.com.ar</p>
+        <h4> Copyright Productos Alimenticios Sevres S.A.</h4>
+        <!-- El copyright en logo -->
+    </footer>
+    <!-- Fin footer -->
+</body>
+</html>
