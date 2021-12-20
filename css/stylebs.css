@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*titulo 'Bebas Neue', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@900&display=swap'); /*texto 'Zen Old Mincho', serif;*/
+
+body {
+    background-color:#fbf4ef;
+}
+.main {
+    background-color:#fbf4ef;  
+    padding: 1rem 0 1rem 0;
+    font-family: 'Zen Old Mincho', serif;; 
+}
+
+/* Inicio header */
+.nav-link {
+    color: #50000f !important;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.nav-link:hover{
+    color: #b30024 !important;
+}
+.navbar-collapse {
+    justify-content: right;
+}
+
+/* Fin header */
+
+
+
+/* Inicio banner */
+.banner {
+    grid-area: banner;
+    background-image: url("../img/banner.jpeg");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+/* Fin banner */
+
+
+
+/* Inicio main */
+main {
+    grid-area: main;
+}
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro p {
+    text-align: center;
+    font-family:'Zen Old Mincho', serif;
+    font-size: 30px;
+}
+.intro img {
+    padding: 1em;
+    width: 170px;
+}
+
+
+
+.opciones {
+    display: grid; 
+    grid-template-areas: 
+    "cata1 cata2 cata3 cata4";
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: fit-content(100%);
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 20px;
+    animation-name: efecto;
+    animation-duration: .5s;
+}
+.opciones section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8f001d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.opciones section div {
+    position: absolute;
+    z-index: 2;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(251, 244, 239, 0.5);
+    font-family:'Bebas Neue', cursive;
+    
+}
+.opciones section div a {
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 2rem;
+    text-align: center;
+}
+.opciones section div a:hover {
+    color: #302e2e;
+    transition: .8s;
+}
+.opciones section img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.cata1 {
+    grid-area: cata1;    
+}
+.cata2 {
+    grid-area: cata2;    
+}
+.cata3 {
+    grid-area: cata3;    
+}
+.cata4 {
+    grid-area: cata4;    
+}
+/* Fin main */
+
+
+/* Inicio footer */
+.pie {
+    padding: 5px;
+    text-align: center;
+    background-color: #8f001d;
+    color: #fbf4ef;
+    font-family: 'Zen Old Mincho', serif;
+}
+.pie h3 {
+    text-decoration: underline;
+    font-size: 25px;
+}
+.pie p {
+    margin: 0;
+}
+/* Fin footer */
+
+
+
+/* Inicio MEDIA QUERY */
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+    .opciones {
+        display: grid; 
+        grid-template-areas: 
+        "cata1 cata2" 
+        "cata3 cata4";
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: fit-content(60%);
+        margin: 0 auto;
+        max-width: 1100px; 
+        padding: 30px;
+    }
+    nav li a {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    /* Inicio grids */
+    .index-grid {
+        display: grid;
+        grid-template-areas:
+        "banner banner"
+        "main main";
+    }
+    .opciones {
+        display: grid; 
+        grid-template-areas: 
+        "cata1"
+        "cata2"
+        "cata3"
+        "cata4";
+        grid-gap: 20px;
+        grid-template-columns: 1fr; 
+        grid-template-rows: fit-content(40%); 
+        margin: 20px;
+        padding: 0; 
+    }
+    .contacto-grid {
+        display: grid;
+        grid-template-areas:
+        "form form"
+        "map map";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .productos-grid {
+        display: grid;
+        grid-template-areas:
+        "logo nav"
+        "aside aside"
+        "prod prod"
+        "footer footer";
+    }
+    .expendedoras-grid {
+        display: grid;
+        grid-template-areas: 
+        "logo nav"
+        "exp exp"
+        "footer footer";
+    }
+    /* Fin grids */
+
+
+
+
+    /* Inicio banner */
+    .banner {
+        height: 400px;
+    }
+    /* Fin banner  */
+
+
+
+
+    /* Inicio main/opciones */
+    .intro {
+        display: block;
+    }
+    .intro p {
+        font-size: 1.5rem;
+    }
+    .intro img {
+        margin-left: 35%;
+    }
+
+    /* Fin main/opciones */
+
+
+
+
+    /* Inicio contacto */
+    .formulario form label {
+        width: 100%;
+        text-align: center;
+    }
+    .formulario form input {
+        width: 100%;
+    }
+    .contacto-map {
+        height: auto;
+        padding: 1em;
+    }
+    /* Fin contacto */
+
+
+
+
+    /* Inicio Nosotros */
+    .acerca_nosotros div {
+        margin: 0 auto;
+        width: 300px;
+        height: 300px;
+    }
+    .acerca_nosotros p {
+        padding: 2px;
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+    /* Fin Nosotros */
+}
+/* Fin MEDIA QUERY */
+
+
+
+
+
+/* Inicio expendedoras */
+.expendedoras {
+    width: 100%;
+    margin: 0 auto;
+}
+.expendedoras-main h2 {
+    text-align: center;
+    font-size: 4em;
+    padding: 20px;
+}
+.expendedoras article{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #222;
+    margin-bottom: 10px;
+}
+.expendedoras article img{
+    width: 180px;
+    height: 250px;
+}
+.expendedoras article div {
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+}
+.expendedoras article div a {
+    padding: 6px;
+    background-color: #50000f;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+/* Fin expendedoras */
+
+
+
+
+
+/* Inicio acerca_de_nosotros.html */
+.acerca_nosotros {
+    padding: 20px;
+}
+.acerca_nosotros div {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px dotted black;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url("../img/acerca_nos.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.acerca_nosotros p {
+    padding: 5px;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    font-family: 'Zen Old Mincho', serif;
+}
+/* Fin acerca_de_nosotros.html */
+
+
+
+
+/* Inicio productos */
+.aside-prod {
+    background-color: #952f2f;
+    padding: 0.8rem;
+}
+.aside-prod h2 {
+    color: #3d0707;
+    text-align: center;
+    font-size: 2em;
+    font-family:'Bebas Neue', cursive;
+}
+.menu {
+    color: #fff;
+    list-style-type: none;
+}
+.menu li {
+    padding: 0.3em;
+}
+.menu li:hover {
+    background-color: #a83f3f;
+}
+.menu li a {
+    font-size: 1em;
+    color: #fff;
+}
+.menu li a:hover {
+    color: #000000;
+    transition: 0.5s;
+}
+.menu .active {
+    color: #000000;
+    font-size: 1.5em;
+}
+.prod {
+    flex-wrap: wrap;
+}
+.prod article {
+    width: 180px;
+    height: 250px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 5px;
+}
+.prod article div {
+    width: 100%;
+    height: 200px;
+}
+.prod article p {
+    text-align: center;
+    padding: 0.1rem;
+}
+/* Fin productos */
+
+
+
+
+/* Inicio contacto */
+.formulario {
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Zen Old Mincho', serif;
+}
+.formulario form {
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 10px;
+}
+.contacto-map, .form h2 {
+    font-family:'Bebas Neue', cursive ;
+    text-align: center;
+}
+.contacto-map { 
+    max-width: 600px;
+    padding: 2rem;
+}
+.contacto-map div {
+    overflow: hidden;
+}
+.contacto-map iframe {
+    display: block;
+    width: 600px;
+    height: 400px;
+}
+#enviar {
+    display: block;
+    width: 100%;
+    max-width: 357px;
+    height: 30px;
+    color: white;
+    background-color: #660014;
+    border-style: none;
+    border-radius: 4px;
+}
+/* Fin de contacto */
+
+
+
+
+/* Inicio KeyFrames */
+@keyframes efecto {
+    0% {opacity: 0;
+    transform: translatey(-32px);}
+    25% {opacity: 0.25;
+    transform: translatey(-24px);}
+    50% {opacity: 0.5;
+    transform: translatey(-16px);}
+    75% {opacity: 0.75;
+    transform: translatey(-8px);}
+    80% {opacity: 1;
+    transform: translatey(0px);}
+}
+/* Fin KeyFrames */
+
+.chequeable {
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    .menu {
+        display: none;
+        visibility: none;
+    }
+    .aside-prod {
+        height: 65px;
+    }
+    .aside-prod h2 {
+        display: inline;
+    }
+    .aside-prod .chequeable  {
+        display: inline;
+        float: right;
+    }
+    .chequeable img {
+        width: 2.5em;
+    }
+    .chequeable input {
+        display: none;
+    }
+    .sub-menu {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        right: -100%;
+        background-color: #952f2f;
+        margin-top: 0px;
+        transition: all .5s;
+        z-index: 15;
+    }
+    .sub-menu li {
+        list-style-type: none;
+        text-align: center;
+        padding: 0.3em;
+    }
+    .sub-menu li:hover {
+        background-color: #a83f3f;
+    }
+    .sub-menu li a {
+        font-size: 1em;
+        color: #fff;
+    }
+    .sub-menu li a:hover {
+        color: #000000;
+        transition: 0.5s;
+    }
+    .sub-menu .active {
+        text-decoration: underline;
+        color: #000000;
+        font-size: 1.5em;
+    }
+    .chequeable input:checked ~ .sub-menu {
+        right: 0;
+        display: block;
+        position: absolute !important;
+    }
+
+
+    
+
+
+
+    /* Inicio expendedoras */
+    .expendedoras-main h2 {
+        text-align: center;
+        font-size: 2em;
+        padding: 10px;
+    }
+    .expendedoras article{
+        width: 300px;
+    }
+    .expendedoras article img{
+        width: 180px;
+        height: 250px;
+    }
+    /* Fin expendedoras */
+
+    /*Inicio nosotros*/
+    .acerca_nosotros div {
+        width: 300px;
+        height: 300px;
+    }
+    .acerca_nosotros p {
+        font-size: 1.2rem;
+    }
+    /* Fin nosotros */
+}

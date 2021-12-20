@@ -5,95 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos alimenticios Sevres</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylebs.css">
+    <link rel="stylesheet" href="../css/bs/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Inicio header -->
-    <header>       
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/logo.png" alt="logo" width="200px">
-            </a> 
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbf4ef;">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="logo" width="200px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="acerca_de_nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="expendedoras.html">Expendedoras</a>
+                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
         </div>
-        <div class="burger-menu">
-            <label class="chequeable">
-                <input type="checkbox" name="menu">
-                <img src="../img/menu.svg" alt="menu">
-                <div class="submenu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-                    <li><a href="expendedoras.html">Expendedoras</a></li>
-                    <li><a href="#" class="active">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </div> 
-            </label>
-        </div>
-        <nav>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-            <li><a href="expendedoras.html">Expendedoras</a></li>
-            <li><a href="#" class="active">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </nav>
-    </header>
+    </nav>
     <!-- Fin header -->
+
+
     <!-- Inicio main -->
-    <main class="productos-grid">
-        <aside class="catalogo">
-            <ul>
-                <li><a href="#">Azúcar y Edulcorante</a></li>
-                <li><a href="#">Aceite</a></li>
-                <li><a href="#">Aguas y Gaseosas</a></li>
-                <li><a href="#">Aderezos</a></li>
-                <li><a href="#">Café</a></li>
-                <li><a href="#">Descartables</a></li>
-                <li><a href="#">Galletitas Dulces</a></li>
-                <li><a href="#">Galletitas Saladas</a></li>
-                <li><a href="#">Golosinas</a></li>
-                <li><a href="#">Leche</a></li>
-                <li><a href="#">Mate cocido/ Yerba</a></li>
-                <li><a href="#">Té</a></li>
-                <li><a href="#">Rollos y Servilletas</a></li>
-                <li><a href="#">Limpieza</a></li>
-            </ul>
-        </aside> 
-        <div class="productos_html">
-            <article>
-                <div>
-                    <img src="#" alt="azucar1">
-                </div>
-                <p>Lorem ipsum dolor sit amet</p>              
-            </article>
-            <article>
-                <div>
-                    <img src="#" alt="azucar2">
-                </div>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <div>
-                    <img src="#" alt="azucar3">
-                </div>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
-            <article>
-                <div>
-                    <img src="#" alt="azucar4">
-                </div>
-                <p>Lorem ipsum dolor sit amet</p>
-            </article>
+    <div class="container-fluid main">
+        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+            <div class="col col-lg-2 sidebar-container aside-prod">
+                <h2>Categorías</h2>
+                <label class="chequeable">
+                    <input type="checkbox" name="menu">
+                    <img src="../img/menu.svg" alt="menu">
+                    <div class="sub-menu">
+                        <li><a href="#" class="active">Azúcar y Edulcorante</a></li>
+                        <li><a href="#">Aceite</a></li>
+                        <li><a href="#">Aguas y Gaseosas</a></li>
+                        <li><a href="#">Aderezos</a></li>
+                        <li><a href="#">Café</a></li>
+                        <li><a href="#">Descartables</a></li>
+                        <li><a href="#">Galletitas Dulces</a></li>
+                        <li><a href="#">Galletitas Saladas</a></li>
+                        <li><a href="#">Golosinas</a></li>
+                        <li><a href="#">Leche</a></li>
+                        <li><a href="#">Mate cocido/ Yerba</a></li>
+                        <li><a href="#">Té</a></li>
+                        <li><a href="#">Rollos y Servilletas</a></li>
+                        <li><a href="#">Limpieza</a></li>
+                    </div> 
+                </label>
+                <div class="menu">
+                    <li><a href="#" class="active">Azúcar y Edulcorante</a></li>
+                    <li><a href="#">Aceite</a></li>
+                    <li><a href="#">Aguas y Gaseosas</a></li>
+                    <li><a href="#">Aderezos</a></li>
+                    <li><a href="#">Café</a></li>
+                    <li><a href="#">Descartables</a></li>
+                    <li><a href="#">Galletitas Dulces</a></li>
+                    <li><a href="#">Galletitas Saladas</a></li>
+                    <li><a href="#">Golosinas</a></li>
+                    <li><a href="#">Leche</a></li>
+                    <li><a href="#">Mate cocido/ Yerba</a></li>
+                    <li><a href="#">Té</a></li>
+                    <li><a href="#">Rollos y Servilletas</a></li>
+                    <li><a href="#">Limpieza</a></li>
+                </div> 
+            </div>
+            <div class="col-md-auto col-lg-auto d-flex justify-content-center prod">
+                <article>
+                    <div>
+                        <img src="#" alt="azucar1">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet</p>              
+                </article>
+                <article>
+                    <div>
+                        <img src="#" alt="azucar2">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="#" alt="azucar3">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="#" alt="azucar4">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </article>
+            </div>
         </div>
-    </main>
-    <!-- Fin main -->
+    </div>
+
+
     <!-- Inicio footer -->
-        <footer>
+        <div class="pie">
             <h3>Información al consumidor</h3>
             <p>Dirección: Av. Lafuente 2770 CABA</p>
             <p>Tel: 4919-1009 / 1022</p>
             <p>Mail: asistencia@sevres.com.ar</p>
             <h4> Copyright Productos Alimenticios Sevres S.A.</h4>
             <!-- El copyright en logo -->
-        </footer>
+        </div>
     <!-- Fin footer -->
 </body>
 </html>

@@ -5,37 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos alimenticios Sevres</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylebs.css">
+    <link rel="stylesheet" href="css/bs/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="logo" width="200px">
-            </a> 
+    <!-- Inicio header -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbf4ef;">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo" width="200px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" href="pages/acerca_de_nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="pages/expendedoras.html">Expendedoras</a>
+                        <a class="nav-link" href="pages/productos.html">Productos</a>
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </div>
+                </div>
         </div>
-        <div class="burger-menu">
-            <label class="chequeable">
-                <input type="checkbox" name="menu">
-                <img src="img/menu.svg" alt="menu">
-                <div class="submenu">
-                    <li><a href="#" class="active">Inicio</a></li>
-                    <li><a href="pages/acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-                    <li><a href="pages/expendedoras.html">Expendedoras</a></li>
-                    <li><a href="pages/productos.html">Productos</a></li>
-                    <li><a href="pages/contacto.html">Contacto</a></li>
-                </div> 
-            </label>
-        </div>
-        <nav>
-            <li><a href="#" class="active">Inicio</a></li>
-            <li><a href="pages/acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-            <li><a href="pages/expendedoras.html">Expendedoras</a></li>
-            <li><a href="pages/productos.html">Productos</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-        </nav>
-    </header>
+    </nav>
+    <!-- Fin header -->
+
+
+    <!-- Inicio banner -->
     <div class="banner"></div>
+    <!-- Fin banner -->
+
+
+
+    <!-- Inicio main -->
     <main>
         <div class="intro">
             <img src="img/camioneta_logo.png" alt="camioneta">
@@ -45,37 +49,42 @@
         <div class="opciones">
             <section class="cata1">
                 <div>
-                    <a href="pages/acerca_de_nosotros.html"><h2>Acerca de nosotros</h2></a>
+                    <a href="pages/acerca_de_nosotros.html">Acerca de nosotros</a>
                 </div>
                 <img src="img/acerca.jpg" alt="acerca_de_nosotros">                
             </section>
             <section class="cata2">
                 <img src="img/expendedoras.jpg" alt="expendedoras">
                 <div>
-                    <a href="pages/expendedoras.html"><h2>Expendedoras</h2></a>
+                    <a href="pages/expendedoras.html">Expendedoras</a>
                 </div>
             </section>
             <section class="cata3">
                 <img src="img/productos.jpg" alt="productos">
                 <div>
-                    <a href="pages/productos.html"><h2>Productos</h2></a>
+                    <a href="pages/productos.html">Productos</a>
                 </div>
             </section>
             <section class="cata4">
                 <img src="img/contacto.jpg" alt="contacto">
                 <div>
-                    <a href="pages/contacto.html"><h2>Contacto</h2></a>
+                    <a href="pages/contacto.html">Contacto</a>
                 </div>
             </section>
         </div>
     </main>
-    <footer>
+    <!-- Fin main -->
+
+
+    <!-- Inicio footer -->
+    <div class="pie">
         <h3>Información al consumidor</h3>
         <p>Dirección: Av. Lafuente 2770 CABA</p>
         <p>Tel: 4919-1009 / 1022</p>
         <p>Mail: asistencia@sevres.com.ar</p>
         <h4> Copyright Productos Alimenticios Sevres S.A.</h4>
         <!-- El copyright en logo -->
-    </footer>
+    </div>
+    <!-- Fin footer -->
 </body>
 </html>

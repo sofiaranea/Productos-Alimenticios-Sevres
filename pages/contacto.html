@@ -5,73 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos alimenticios Sevres</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylebs.css">
+    <link rel="stylesheet" href="../css/bs/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Inicio header -->
-    <header>        
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/logo.png" alt="logo" width="200px">
-            </a>   
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbf4ef;">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="logo" width="200px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="acerca_de_nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="expendedoras.html">Expendedoras</a>
+                        <a class="nav-link" href="productos.html">Productos</a>
+                        <a class="nav-link" href="#">Contacto</a>
+                    </div>
+                </div>
         </div>
-        <div class="burger-menu">
-            <label class="chequeable">
-                <input type="checkbox" name="menu">
-                <img src="../img/menu.svg" alt="menu">
-                <div class="submenu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-                    <li><a href="expendedoras.html">Expendedoras</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="#" class="active">Contacto</a></li>
-                </div> 
-            </label>
-        </div>
-        <nav>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
-            <li><a href="expendedoras.html">Expendedoras</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="#" class="active">Contacto</a></li>
-        </nav>
-    </header>
+    </nav>
     <!-- Fin header -->
+
+
+
     <!-- Inicio main -->
-    <main class="contacto-grid">
-        <section class="contacto-map">
-            <div>
-                <h2>¡DEJANOS TU CONSULTA!</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.822214824579!2d-58.44532808417356!3d-34.65919256794372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbeb9da45789%3A0xc9296dec70f0cf51!2sAv.%20Lafuente%202770%2C%20C1437%20CABA!5e0!3m2!1ses!2sar!4v1635715821070!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="container-fluid main">
+        <div class="row row-cols-md-2 row-cols-sm-1 row-cols-1">
+            <div class="col">
+                <section class="d-flex justify-content-center form">                   
+                    <div class="formulario">
+                        <h2>¡DEJANOS TU CONSULTA!</h2>
+                        <form action="" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastname" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="lastname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="query" class="form-label">Consulta:</label>
+                                <textarea class="form-control" id="query" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" value="Enviar" id="enviar">
+                            </div>
+                        </form>
+                    </div>   
+                </section>
             </div>
-        </section>
-        <section class="form">
-            <h2>¡DEJANOS TU CONSULTA!</h2>
-            <div class="formulario">
-                <form action="" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="user_nombre" id="nombre" required>
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" name="user_apellido" id="apellido" required>
-                    <label for="email">Email:</label>
-                    <input type="email" name="user_email" id="email" required>
-                    <label for="consulta">Consulta:</label>
-                    <textarea name="user_consulta" id="consulta" cols="30" rows="10" required></textarea>
-                    <input type="submit" value="Enviar" id="enviar">
-                </form>
-            </div>   
-        </section>
-    </main>  
+            <div class="col">
+                <section class="d-flex justify-content-center contacto-map">
+                    <div>
+                        <h2>Nuestra ubicación</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.822214824579!2d-58.44532808417356!3d-34.65919256794372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbeb9da45789%3A0xc9296dec70f0cf51!2sAv.%20Lafuente%202770%2C%20C1437%20CABA!5e0!3m2!1ses!2sar!4v1635715821070!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
     <!-- Fin main -->
+
+
+
+
     <!-- Inicio footer -->
-    <footer>
+    <div class="pie">
         <h3>Información al consumidor</h3>
         <p>Dirección: Av. Lafuente 2770 CABA</p>
         <p>Tel: 4919-1009 / 1022</p>
         <p>Mail: asistencia@sevres.com.ar</p>
         <h4> Copyright Productos Alimenticios Sevres S.A.</h4>
         <!-- El copyright en logo -->
-    </footer>
+    </div>
     <!-- Fin footer -->
 </body>
 </html>
