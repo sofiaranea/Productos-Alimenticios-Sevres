@@ -1,0 +1,18 @@
+{
+  "name": "Sevres",
+  "versión": "3.0",
+  "main": "index.html",
+  "author": "Sofia Ranea",
+  "description": "Proyecto Sevres - En produccion",
+  "url": "https://github.com/sofiaranea/Productos-Alimenticios-Sevres.git",
+
+  "devDependencies": {
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "bootstrap": "v4.6.0"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss css/styleSASS.scss css/mainSASS.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  }
+}
