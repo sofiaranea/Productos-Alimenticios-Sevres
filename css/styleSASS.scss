@@ -39,26 +39,30 @@ body {
 
 /*Inicio banner*/
 .banner {
-    background-image: url("../img/banner.jpeg");
+    background-image: url("../img/banner2.jpg");
     height: 500px;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
     background-repeat: no-repeat;
     margin-bottom: 20px;
 
     div {
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        animation-name: efecto2;
+        animation-duration: 0.8s;
+        float: right;
 
-        h1 {
-            text-align: center;
-            font-size: 8rem;
-            color: #363636;
-            background-color: rgba(251, 244, 239, 0.5);
-            padding: 10px;   
-            border-radius: 5px;
+        img {
+            margin-right: 300px;
+        }
+        p {
+            align-items: center;
+            font-family: $font-2;
+            margin-right: 300px;
+            color: $bg-color;
         }
     }
 }
@@ -187,6 +191,14 @@ body {
     80% {opacity: 1;
     transform: translatey(0px);}
 }
+@keyframes efecto2 {
+    0% {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    80% {opacity: 1;}
+}
+
 
 
 
@@ -211,6 +223,20 @@ body {
         font-size: 5rem;
     }
 }
+@media only (max-width: 450px) {
+    .banner {
+        background-image: url("../img/banner_mobile.jpg");
+        height: 300px !important;
+
+        div {
+
+            img {
+                width: 200px;
+                margin: 0;
+            }
+        }
+    }
+}
 @media only screen and (min-width: 0px) and (max-width: 768px) {
     .opciones {
         display: grid; 
@@ -226,7 +252,7 @@ body {
         padding: 0; 
     }
     .banner {
-        height: 400px;
+        height: 500px;
     }
     .banner div h1 {
         font-size: 4rem;
@@ -264,32 +290,3 @@ body {
     @include catalogo($font-1)
 }
 /*Fin MIXIN*/
-
-
-
-/*Inicio EXTEND*/
-.cata-2 {
-    @extend.cata;
-    border: 2px dotted black;
-}
-.cata-3 {
-    @extend.cata;
-    border: 2px dotted blue;
-}
-/*Fin EXTEND*/
-
-
-
-/*Inicio MAP*/
-$catalogo:(
-    acerca: #1d1d1d,
-    expendedoras: #363636,
-    productos: #683a3a,
-    contacto: #7e3636
-);
-@each $red, $color in $catalogo {
-    .cata-texto-#{$red} {
-        color: $color !important;
-    }
-}
-/*Fin MAP*/

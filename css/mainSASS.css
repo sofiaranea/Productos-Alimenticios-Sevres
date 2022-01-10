@@ -27,24 +27,27 @@ body {
 /*Fin navbar*/
 /*Inicio banner*/
 .banner {
-  background-image: url("../img/banner.jpeg");
+  background-image: url("../img/banner2.jpg");
   height: 500px;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
   background-repeat: no-repeat;
   margin-bottom: 20px; }
   .banner div {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; }
-    .banner div h1 {
-      text-align: center;
-      font-size: 8rem;
-      color: #363636;
-      background-color: rgba(251, 244, 239, 0.5);
-      padding: 10px;
-      border-radius: 5px; }
+    align-items: center;
+    animation-name: efecto2;
+    animation-duration: 0.8s;
+    float: right; }
+    .banner div img {
+      margin-right: 300px; }
+    .banner div p {
+      align-items: center;
+      font-family: "Zen Old Mincho", serif;
+      margin-right: 300px;
+      color: #fbf4ef; }
 
 /*Fin banner*/
 /*Inicio main*/
@@ -151,6 +154,18 @@ body {
     opacity: 1;
     transform: translatey(0px); } }
 
+@keyframes efecto2 {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  80% {
+    opacity: 1; } }
+
 /*Mediaquery*/
 @media only screen and (min-width: 769px) and (max-width: 960px) {
   .opciones {
@@ -167,6 +182,14 @@ body {
   .banner div h1 {
     font-size: 5rem; } }
 
+@media (max-width: 450px) {
+  .banner {
+    background-image: url("../img/banner_mobile.jpg");
+    height: 300px !important; }
+    .banner div img {
+      width: 200px;
+      margin: 0; } }
+
 @media only screen and (min-width: 0px) and (max-width: 768px) {
   .opciones {
     display: grid;
@@ -177,7 +200,7 @@ body {
     margin: 20px;
     padding: 0; }
   .banner {
-    height: 400px; }
+    height: 500px; }
   .banner div h1 {
     font-size: 4rem; }
   .intro {
@@ -188,7 +211,7 @@ body {
       margin-left: 35%; } }
 
 /*Inicio MIXIN*/
-.cata, .cata-2, .cata-3 {
+.cata {
   width: 100%;
   height: 100%;
   position: relative;
@@ -201,25 +224,3 @@ body {
   font-family: "Bebas Neue", cursive; }
 
 /*Fin MIXIN*/
-/*Inicio EXTEND*/
-.cata-2 {
-  border: 2px dotted black; }
-
-.cata-3 {
-  border: 2px dotted blue; }
-
-/*Fin EXTEND*/
-/*Inicio MAP*/
-.cata-texto-acerca {
-  color: #1d1d1d !important; }
-
-.cata-texto-expendedoras {
-  color: #363636 !important; }
-
-.cata-texto-productos {
-  color: #683a3a !important; }
-
-.cata-texto-contacto {
-  color: #7e3636 !important; }
-
-/*Fin MAP*/
